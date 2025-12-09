@@ -33,7 +33,7 @@ El objetivo es implementar un **mini framework de automatización** que integre:
 
 ---
 
-## estructura del Proyecto
+## Estructura del Proyecto
 
 ```bash
 proyecto-Final-Automation-Testing-Pablo-Demetrio/
