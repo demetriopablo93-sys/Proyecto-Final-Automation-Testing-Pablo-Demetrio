@@ -94,5 +94,3 @@ Ejecutar solo pruebas de UI pytest -m ui --html=reports/report_ui.html --self-co
 
 
 Ejecutar solo pruebas de API pytest -m api --html=reports/report_api.html --self-contained-html
-
-
