@@ -1,33 +1,42 @@
-# Proyecto Integrador de Automatización - Talento Tech - Pablo Demetrio(ENTREGA FINAL)
+# Proyecto Final - Automation Testing (UI + API)
 
-Proyecto Final - Automation Testing (UI + API)
-Este proyecto forma parte del trabajo final del curso de Automatización QA en Python.
-El objetivo es implementar un mini framework de automatización que integre:
+Este proyecto forma parte del trabajo final del curso de Automatización QA en Python.  
+El objetivo es implementar un **mini framework de automatización** que integre:
 
+- Pruebas UI con **Selenium WebDriver** + **Pytest**
+- Pruebas de API con **Requests**
+- Patrón **Page Object Model (POM)**
+- Manejo de **datos externos** (JSON)
+- **Screenshots** automáticos en fallos
+- **Logging** centralizado
+- **Reportes HTML** con `pytest-html`
+- Integración lista para ejecutarse en **Git** / **GitHub**
 
-Pruebas UI con Selenium WebDriver + Pytest
-Pruebas de API con Requests
-Patrón Page Object Model (POM)
-Manejo de datos externos (JSON)
-Screenshots automáticos en fallos
-Logging centralizado
-Reportes HTML con pytest-html
-Integración lista para ejecutarse en Git / GitHub
-Autor
-Nombre: Pablo Demetrio
-Repositorio: Proyecto-Final-Automation-Testing-Pablo-Demetrio
-Tecnologías Utilizadas
-Lenguaje: Python
-Framework de testing: Pytest
-Automatización UI: Selenium WebDriver
-Pruebas de API: Requests
-Reportes HTML: pytest-html
-Control de versiones: Git
-Repositorio remoto: GitHub
+---
 
+## Autor
 
-Estructura del Proyecto
-proyecto-final-automation-testing-Pablo-Demetrio/
+- Nombre: **Pablo Demetrio**
+- Repositorio: Proyecto-Final-Automation-Testing-Pablo-Demetrio
+
+---
+
+## Tecnologías Utilizadas
+
+- **Lenguaje:** Python
+- **Framework de testing:** Pytest
+- **Automatización UI:** Selenium WebDriver
+- **Pruebas de API:** Requests
+- **Reportes HTML:** pytest-html
+- **Control de versiones:** Git
+- **Repositorio remoto:** GitHub
+
+---
+
+## estructura del Proyecto
+
+```bash
+proyecto-Final-Automation-Testing-Pablo-Demetrio/
 ├─ config/
 │  └─ settings.py          
 ├─ pages/                 
@@ -65,32 +74,40 @@ proyecto-final-automation-testing-Pablo-Demetrio/
 ├─ pytest.ini
 ├─ requirements.txt
 └─ READM
+```
 
+---
 
-Configuración de Entorno
-1.Clonar el repositorio: git clone https://github.com/demetriopablo93-sys/Proyecto-Final-Automation-Testing-Pablo-Demetrio cd Proyecto-Final-Automation-Testing-Pablo-Demetrio
+## Configuración de Entorno
 
+- **1.Clonar el repositorio:** 
+git clone https://github.com/<usuario>/proyecto-Final-Automation-Testing-Pablo-Demetrio.git
+cd proyecto-Final-Automation-Testing-Pablo-Demetrio
 
-2.Instalar dependencias: pip3 install -r requirements.txt
+- **2.Instalar dependencias:**
+pip3 install -r requirements.txt
 
+- **3.Requisitos de navegador:**
+Este proyecto utiliza Google Chrome y ChromeDriver:
 
-3.Requisitos de navegador: Este proyecto utiliza Google Chrome y ChromeDriver:
+Tener Chrome instalado
+Tener chromedriver accesible en el PATH
 
+---
 
-Tener Chrome instalado Tener chromedriver accesible en el PATH
+## Configuración Global
+- **URLs de prueba**
+- BASE_URL_UI = "https://www.saucedemo.com"
+- BASE_URL_API = "https://jsonplaceholder.typicode.com"
 
+---
 
-Configuración Global
-URLs de prueba
-BASE_URL_UI = "https://www.saucedemo.com"
-BASE_URL_API = "https://jsonplaceholder.typicode.com"
+## Ejecución de Pruebas
+- **Ejecutar todas las pruebas (UI + API)**
+pytest --html=reports/report_all.html --self-contained-html
 
+- **Ejecutar solo pruebas de UI**
+pytest -m ui --html=reports/report_ui.html --self-contained-html
 
-Ejecución de Pruebas
-Ejecutar todas las pruebas (UI + API) pytest --html=reports/report_all.html --self-contained-html
-
-
-Ejecutar solo pruebas de UI pytest -m ui --html=reports/report_ui.html --self-contained-html
-
-
-Ejecutar solo pruebas de API pytest -m api --html=reports/report_api.html --self-contained-html
+- **Ejecutar solo pruebas de API**
+pytest -m api --html=reports/report_api.html --self-contained-html
